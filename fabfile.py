@@ -16,7 +16,7 @@ env.env_path = '%(path)s/env' % env
 env.repo_path = '%(path)s/repository' % env
 env.apache_config_path = '/home/newsapps/sites/apache/%(project_name)s' % env
 env.python = 'python2.6'
-env.repository_url = 'your_git_repository_url'
+env.repository_url = 'git://github.com/MrMetlHed/hello_newsroom.git'
 env.multi_server = False
 env.memcached_server_address = "cache.example.com"
 
@@ -42,12 +42,12 @@ def staging():
     """
     env.settings = 'staging'
     env.user = 'newsapps'
-    env.hosts = ['your-ec2-instance-dns-name.amazonaws.com'] 
+    env.hosts = 'ec2-72-44-53-181.compute-1.amazonaws.com' 
     # Install your SSH public key in the 'authorized_keys' file for the above user on the above host,
     # or specify the path to your private key in env.key_filename below.
     # see http://www.eng.cam.ac.uk/help/jpmg/ssh/authorized_keys_howto.html for more info.
     # env.key_filename = 'path_to_your_key_file.pem'
-    env.s3_bucket = 'your-bucket-name.s3.amazonaws.com'
+    env.s3_bucket = 'cs-apps.s3.amazonaws.com'
     
 """
 Branches
